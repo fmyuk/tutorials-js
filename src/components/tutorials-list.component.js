@@ -112,7 +112,7 @@ export default class TutorialsList extends Component {
         <div className="col-md-6">
           <h4>Tutorials List</h4>
           <ul className="list-group">
-            {tutorials && turorials.map((tutorial, index) => (
+            {tutorials && tutorials.map((tutorial, index) => (
               <li
                 className={"list-group-item " + (index === currentIndex ? "active" : "")}
                 onClick={() => this.setActiveTutorial(tutorial, index)}
