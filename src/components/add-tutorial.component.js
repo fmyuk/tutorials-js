@@ -4,10 +4,6 @@ import TutorialDataService from "../services/tutorial.service";
 export default class AddTutorial extends Component {
   constructor(props) {
     super(props);
-    this.onChangeTitle = this.onChangeTitle.bind(this);
-    this.onChangeDescription = this.onChangeDescription.bind(this);
-    this.saveTutorial = this.saveTutorial.bind(this);
-    this.newTutorial = this.newTutorial.bind(this);
 
     this.state = {
       id: null,
@@ -18,19 +14,19 @@ export default class AddTutorial extends Component {
     };
   }
 
-  onChangeTItle(e) {
+  onChangeTItle = (e) => {
     this.setState({
       title: e.target.value
     });
-  }
+  };
 
-  onChangeDescription(e) {
+  onChangeDescription = (e) => {
     this.setState({
       description: e.target.value
     });
-  }
+  };
 
-  saveTutorial() {
+  saveTutorial = () => {
     var data = {
       title: this.state.title,
       description: this.state.description
@@ -50,9 +46,9 @@ export default class AddTutorial extends Component {
       .catch(e => {
         console.log(e);
       });
-  }
+  };
 
-  newTutorial() {
+  newTutorial = () => {
     this.setState({
       id: null,
       title: "",
@@ -60,7 +56,7 @@ export default class AddTutorial extends Component {
       published: false,
       submitted: false
     });
-  }
+  };
 
   render() {
     return (
