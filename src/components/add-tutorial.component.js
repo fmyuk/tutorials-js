@@ -14,7 +14,7 @@ export default class AddTutorial extends Component {
     };
   }
 
-  onChangeTItle = (e) => {
+  onChangeTitle = (e) => {
     this.setState({
       title: e.target.value
     });
@@ -82,7 +82,7 @@ export default class AddTutorial extends Component {
                 name="title"
               />
 
-              <div classNmae="form-group">
+              <div className="form-group">
                 <label htmlFor="description">Description</label>
                 <input
                   type="text"
